@@ -136,5 +136,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Allow React Vite app
+    "http://localhost:5173", # Allow React Vite app locally
+    "https://sparkling-crumble-80fd0d.netlify.app",  # Allow Netlify app  # Allow React Vite app
 ]
