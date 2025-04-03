@@ -89,8 +89,8 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get('DATABASE_URL')
-DATABASES['default'] = dj_database_url.parse(database_url)
+
+DATABASES['default'] = dj_database_url.parse("postgresql://todo_app_render_database_user:s58imWEroNCc141heiJgsblFbwpfD2e1@dpg-cvn5p524d50c73ftpg3g-a.singapore-postgres.render.com/todo_app_render_database")
 
 
 
