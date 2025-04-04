@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import JsonResponse  # Import JsonResponse for the home view
+from django.http import JsonResponse 
 
 from rest_framework import viewsets
 from .models import Task
@@ -7,7 +7,7 @@ from .serializers import TaskSerializer
 
 def home_view(request):
     """Return a welcome message."""
-    return JsonResponse({'message': 'Welcome to the API!'})  # Simple welcome message
+    return JsonResponse({'message': 'Welcome to the API!'})
 
 class TaskViewSet(viewsets.ModelViewSet):
 
