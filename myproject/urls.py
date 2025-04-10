@@ -19,6 +19,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from myapp.views import TaskViewSet
 from rest_framework.authtoken.views import obtain_auth_token
+from myapp.views import SecureHelloView
 
 class TaskViewSetRestricted(TaskViewSet):
     http_method_names = ['get', 'post', 'put', 'delete']
@@ -29,6 +30,7 @@ router.register(r'tasks', TaskViewSetRestricted, basename='task')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('api-token-auth/', obtain_auth_token),  # Automatically includes only specified CRUD routes
+    path('api-token-auth/', obtain_auth_token),  
+    path('secure-hello/', SecureHelloView.as_view()),
 ]
 
